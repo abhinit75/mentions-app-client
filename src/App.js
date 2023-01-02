@@ -28,7 +28,7 @@ const MentionTextBox = () => {
         //   },
         // });
         const response = await fetch(
-          `https://mentions-app-client.onrender.com/search?q=${query.toLowerCase()}`,
+          `https://mentions-app-server.onrender.com/search?q=${query.toLowerCase()}`,
           {
             method: "GET", // *GET, POST, PUT, DELETE, etc.
             mode: "same-origin", // no-cors, *cors, same-origin
