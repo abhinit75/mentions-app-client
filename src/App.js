@@ -31,7 +31,7 @@ const MentionTextBox = () => {
           `https://mentions-app-server.onrender.com/search?q=${query.toLowerCase()}`,
           {
             method: "GET", // *GET, POST, PUT, DELETE, etc.
-            mode: "no-cors", // no-cors, *cors, same-origin
+            mode: "cors", // no-cors, *cors, same-origin
             cache: "no-cache",
             headers: {
               "Content-Type": "application/json",
