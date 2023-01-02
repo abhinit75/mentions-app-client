@@ -33,7 +33,6 @@ const MentionTextBox = () => {
             method: "GET", // *GET, POST, PUT, DELETE, etc.
             mode: "same-origin", // no-cors, *cors, same-origin
             cache: "no-cache",
-            credentials: "same-origin",
             headers: {
               "Content-Type": "application/json",
             },
