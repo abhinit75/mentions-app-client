@@ -6,7 +6,7 @@ import axios from "axios";
 import { Button, Badge, Pane } from "evergreen-ui";
 import ReactDOMServer from "react-dom/server";
 
-let URL = "https://mentions-app-server.onrender.com/";
+let URL = "https://mentions-app-server.onrender.com";
 
 const MentionTextBox = () => {
   const [text, setText] = useState("");
