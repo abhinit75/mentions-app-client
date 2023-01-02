@@ -6,9 +6,6 @@ import axios from "axios";
 import { Button, Badge, Pane } from "evergreen-ui";
 import ReactDOMServer from "react-dom/server";
 
-let URL = process.env.ENV != "dev" ? process.env.URL : "http://localhost:3000/";
-console.log(URL);
-
 const MentionTextBox = () => {
   const [text, setText] = useState("");
   const [updatedMention, setUpdatedMention] = useState("");
@@ -22,11 +19,6 @@ const MentionTextBox = () => {
       const queryMatch = text.match(/@(\S+)/);
       if (queryMatch) {
         const query = queryMatch[0].slice(1);
-        // const results = await axios.get(`http://localhost:3000/search`, {
-        //   params: {
-        //     q: query.toLowerCase(),
-        //   },
-        // });
         const response = await fetch(
           `https://mentions-app-server.onrender.com/search?q=${query.toLowerCase()}`,
           {
